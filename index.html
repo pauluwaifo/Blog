@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogpress - Blog and Magazine by paul</title>
+  <link rel="shortcut icon" href="assests/site_logo/site_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body id="id1">
+  <div class="container-fluid p-0">
+    <div class="row top-ad">
+      <div class="col-sm-12">
+        <h6 class="text-white inline-block f-w-5">Unlimited download! starting from $15/m</h6>
+        <a href="#" class="top-adbtn f-w-6">Grab now!</a>
+      </div>
+    </div>
+  </div>
+  <div class="container lh-n">
+    <div class="p-lr">
+      <!-- TOPBAR -->
+      <div class="container b-border m-d p-lr lh-n">
+        <div class="row">
+          <!-- TOP-NAV -->
+          <div class="col-sm-6 nav">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Forum</a></li>
+              <li><a href="#">Buy now!</a></li>
+              <li><button class="login-btn" onclick="openForm()">Login/Join</button></li>
+              <div class="form-popup" id="myForm">
+                <form action="https://www.w3schools.com/action_page.php" class="form-container">
+                  <h1>Login</h1>
+
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <button type="submit" class="btn">Login</button>
+                  <button type="submit" class="btn join">join</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+
+            </ul>
+          </div>
+          <!-- FUNCTIONS -->
+          <div class="col-sm-6 func">
+            <ul>
+              <li><a href="#" class="bi bi-twitter"></a></li>
+              <li><a href="#" class="bi bi-instagram"></a></li>
+              <li><a href="#" class="bi bi-pinterest"></a></li>
+              <li><a href="#" class="bi bi-facebook"></a></li>
+              <li><a href="#" class="bi bi-activity"></a></li>
+              <li>
+                <a href="#" class="bi bi-bell-fill" id="notification" onclick="myNotification()">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="bi bi-brightness-high-fill" id="mode"
+                  onclick="myMode(); mChange(); btn(); btn2(); heading_1(); mySideNav(); paragraph(); myLink()">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- NAVIGATION -->
+      <div class="container lh-n">
+        <div class="row">
+          <!-- LOGO -->
+          <div style="padding: 18px; font-size: 1rem;" class="col-sm-3 lh-n">
+            <img src="assests/site_logo/site_logo.png" width="25%" style="display: inline;">
+            <h1 style="font-size: 2rem; display: inline;">
+              blogpress
+              <h1 />
+          </div>
+          <!-- MAIN-NAV -->
+          <div class="col-sm-6 al-c lh-n">
+            <!-- HOME -->
+            <div class="dropdown" style="text-align: left !important;">
+              <button class="dropbtn" style="display: inline;">
+                Home
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" id="btn">
+                <a href="#">
+                  Magazine
+                  <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                </a>
+                <a href="#">Home Shop</a>
+                <a href="#">
+                  Blog Tech 
+                  <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                </a>
+              </div>
+            </div>
+            <!-- Pages -->
+            <div class="dropdown" style="text-align: left !important;">
+              <button class="dropbtn" style="display: inline;">
+                Pages
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" id="btn">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <!-- Shop dropdown -->
+                <div class="inner-dropdown inline">
+                  <button class="inner-dropbtn al-l Bbtn" style="display: inline;">
+                    Shop
+                    <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    <span class="bi bi-plus position-absolute-r10"></span>
+                  </button>
+                  <div class="inner-dropdown-content" id="btn2">
+                    <a href="#">
+                      Shop Grid
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                    <a href="#">
+                      Shop Detail
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                    <a href="#">
+                      Checkout
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                    <a href="#">
+                      Cart
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                    <a href="#">
+                      Empty Cart
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                  </div>
+                </div>
+                <a href="#">Error 404</a>
+                <!-- Other Archives dropdown -->
+                <div class="inner-dropdown inline">
+                  <button class="inner-dropbtn al-l Bbtn" style="display: inline;">
+                    Other Archives
+                    <span class="bi bi-plus position-absolute-r10"></span>
+                  </button>
+                  <div class="inner-dropdown-content" id="btn2">
+                    <a href="#">Author Page</a>
+                    <a href="#">Category Page 1</a>
+                    <a href="#">Category Page 2</a>
+                    <a href="#">#Tag</a>
+                    <a href="#">Search Result</a>
+                  </div>
+                </div>
+                <a href="#"></a>
+                <a href="#">Signin</a>
+                <a href="#">Signup</a>
+                <a href="#">Offline</a>
+                <!-- Social media dropdown -->
+                <!-- divider -->
+                <div class="t-border"></div>
+                <div class="inner-dropdown inline">
+                  <button class="inner-dropbtn al-l Bbtn" style="display: inline;">
+                    Social Media
+                    <span class="bi bi-plus position-absolute-r10"></span>
+                  </button>
+                  <div class="inner-dropdown-content" id="btn2">
+                    <a href="#">
+                      Magazine
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                    <a href="#">Home Shop</a>
+                    <a href="#">
+                      Blog Tech 
+                      <span class="f-p6 f-w-7 text-bg-danger ptblr-2 border-r-5">New</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="t-border"></div>
+                <a href="#">
+                  <i class="bi bi-life-preserver color-warning"></i>
+                  Support
+                </a>
+                <a href="#">
+                  <i class="bi bi-folder-plus color-danger"></i>
+                  Documentation
+                </a>
+                <!-- divider -->
+                <div class="t-border"></div>
+                <a href="#">
+                  <i class="bi bi-toggle-off color-info"></i>
+                  RTL Demo
+                </a>
+                <a href="#">
+                  <i class="bi bi-cloud-download-fill color-success"></i>
+                  Buy Blogpress
+                </a>
+              </div>
+            </div>
+            <!-- Post -->
+            <div class="dropdown" style="text-align: left !important;">
+              <button class="dropbtn" style="display: inline;">
+                Post
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" id="btn">
+                <!-- Post Grid dropdown -->
+                <div class="inner-dropdown inline">
+                  <button class="inner-dropbtn al-l Bbtn" style="display: inline;">
+                    Post Grid
+                    <span class="bi bi-plus position-absolute-r10"></span>
+                  </button>
+                  <div class="inner-dropdown-content ad-width" id="btn2">
+                    <a href="#">Post Grid</a>
+                    <a href="#">Post Grid 4 col</a>
+                    <a href="#">Post Grid Masonary</a>
+                    <a href="#">Post Grid Masonary Filter</a>
+                    <a href="#">Post Mixed Large Than Grid</a>
+                  </div>
+                </div>
+                <a href="#">Post List</a>
+                <a href="#">Post List 2</a>
+                <a href="#">Post Card</a>
+                <a href="#">Post Overlay</a>
+                <a href="#">Post Types</a>
+                <!-- Divider -->
+                <div class="t-border"></div>
+                <a href="#">Post Single Magazine</a>
+                <a href="#">Post Single Classic</a>
+                <a href="#">Post Single Minimal</a>
+                <a href="#">Post Single Card</a>
+                <a href="#">Post Single Review</a>
+                <a href="#">Post Single Video</a>
+                <a href="#">Podcast Single</a>
+                <!-- Divider -->
+                <div class="t-border"></div>
+                <a href="#">Pagination Styles</a>
+              </div>
+            </div>
+            <!-- Lifestyle -->
+            <div class="dropdown" style="text-align: left !important;">
+              <button class="dropbtn" style="display: inline;">
+                Lifestyle
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-content ad-width2" id="btn">
+                <div class="row position-relative border">
+                  <div class="col-9 border">
+                    <div class="row">
+                      <div class="col-3 border">msmdf</div>
+                      <div class="col-3 border">msdf</div>
+                      <div class="col-3 border">msfer</div>
+                    </div>
+                  </div>
+                  <div class="col-3 border">gshfs</div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown" style="text-align: left !important;">
+              <form action="www.google.com" method="post">
+                <button class="dropbtn nav" type="submit">
+                  Dashboard
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- MAIN-NAV-RIGHT -->
+          <div class="col-sm-3 nav-menu lh-n">
+            <ul>
+              <!-- SIDE-NAV -->
+              <li onclick="openNav()">
+                <a href="#" style="font-size: 2rem;" class="bi bi-text-left"></a>
+              </li>
+              <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <!-- SIDE-NAV-LOGO -->
+                <div style="padding:8px 0px 8px 0px;" class="m-d-8 m-t-18">
+                  <img src="assests/site_logo/site_logo.png" width="20%" style="display: inline; padding-bottom: 20px;">
+                  <h1 style="font-size: 1.7rem; display: inline;">
+                    blogpress
+                  </h1>
+                  <p>The next-generation blog, news, and magazine theme for you to start sharing your stories today</p>
+                </div>
+                <!-- MENU -->
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <!-- side bar membership information -->
+                <div class="mbg-primary border-r-5 al-c ptblr2 p-tb-3 m-t-10">
+                  <span style="color: grey;">The Blogpress</span>
+                  <h3 class="m-t-3 f-w-7">Save on Premium Membership</h3>
+                  <p>Get the insights report trusted by experts around the globe. Become a Member Today!</p>
+                  <a href="#" class="m-t-5 text-bg-warning border-r-5 ptblr al-c f-sm-1 inline-block" style="letter-spacing: 1px;">View pricing plans</a>
+                </div>
+              </div>
+              <!-- SEARCH BAR -->
+              <li>
+                <div class="dropdown-search">
+                  <button class="dropbtn-search bi bi-search"></button>
+                  <div class="dropdown-content-search" id="search-content">
+                    <form class="example" action="https://www.w3schools.com/action_page.php"
+                      style="margin:auto;      max-width:300px" style="border: 0;">
+                      <input type="text" placeholder="Search.." name="search2" class="grg">
+                      <button type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <li><a class="sub" href="#">Subscribe!</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- CAROUSEL -->
+      <div class="container container-color1 lh-n">
+        <div class="row">
+          <div class="col-sm-2">
+            <p class="trending text-white">
+              Trending:
+            </p>
+          </div>
+          <!-- TEXT CAROUSEL -->
+          <div class="col-sm-10 inner" style="padding-top: 5px;">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <!-- CAROUSEL INNER -->
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <a href="#"> How the 10 worst business business fails of all time could have been prevented</a>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <a href="#">The most common business debate isn't as black and white as you think</a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#">The best places to visit during summer</a>
+                </div>
+              </div>
+              <!-- BUTTON -->
+              <div class="ml">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                  data-bs-slide="next">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BODY -->
+      <div class="container p-0 lh-n">
+        <div class="row">
+          <!-- left big card item start -->
+          <div class="col-lg-6">
+            <div class="my-grad img_ph-1 m-t-8 p-tb-1 cl-1" id="resetHover">
+              <div class="av-txt-aln">
+                <!-- LIFESTYLE BADGE -->
+                <div id="badge">
+                  <a href="#" class="text-bg-danger badge f-1">
+                    <span class="bi bi-egg-fill"></span>
+                    Lifestyle
+                  </a>
+                </div>
+                <!-- HEADING -->
+                <a href="#" class="f-2 txt f-w-6">
+                  Sun Flowers. The Fastest Growing Flower Industry
+                </a>
+                <!-- PARAGRAPH -->
+                <p class="m-t-3 text-white">
+                  flowers are very important in life and this are the bla bla bla i got to tell you if you listen you
+                  know you know.
+                </p>
+                <!-- AVATAR HOLDER -->
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <!-- AVATER -->
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/landscape-1.jfif" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span>by</span>
+                      <a href="" class="txt-avater txt-sm" onmouseover="resetH()" onmouseleave="resetT()">Unknown</a>
+                    </li>
+                    <li> 5 min read</li>
+                    <li> Feb 10, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- left big card item end -->
+          <!-- right card item start -->
+          <div class="col-lg-6">
+            <div class="row">
+              <!-- right big card item start -->
+              <div class="col-sm-12">
+                <div class="my-grad img_ph-2 m-t-8 cl-1" id="resetHover">
+                  <div class="av-txt-aln">
+                    <!-- TECHNOLOGY BADGE -->
+                    <div id="badge">
+                      <a href="#" class="text-bg-warning badge f-1">
+                        <span class="bi bi-vinyl"></span>
+                        Technology
+                      </a>
+                    </div>
+                    <!-- HEADING -->
+                    <div id="b-b head">
+                      <a href="#" class="f-1p5 txt f-w-7 al-l">
+                        The benifits of satellite imagery in the African Continent.
+                      </a>
+                    </div>
+                    <!-- AVATAR CASE -->
+                    <div class="avatar_case f-w-5 f-sm-1">
+                      <ul>
+                        <li class="lst dn-h-warning" style="float: left; 
+                          margin: 8px 0px !important;">
+                          <div class="hover-text bi bi-circle-fill">
+                            <span class="tooltip-text f-w-7 " id="top">6 min read..</span>
+                          </div>
+                        </li>
+                        <li class="lst " style="float: left;">
+                          <span>by</span>
+                          <a href="#" class="txt-avater txt-sm" onmouseover="resetH()" onmouseleave="resetT()">Unknown</a>
+                        </li>
+                        <li> Sept 03, 2022 </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- right big card item end -->
+              <!-- left small card item start -->
+              <div class="col-sm-6">
+                <div class="my-grad cl-1 img_ph-3 m-t-8" id="resetHover">
+                  <div class="av-txt-aln">
+                    <!-- BUSINESS BADGE -->
+                    <div id="badge">
+                      <a href="#" class="text-bg-success badge f-1">
+                        <span class="bi bi-currency-exchange"></span>
+                        Business
+                      </a>
+                    </div>
+                    <!-- HEADING -->
+                    <div id="b-b head">
+                      <a href="#" class="f-1p3 txt f-w-7 al-l">
+                        How To Be Successfull in life
+                      </a>
+                    </div>
+                    <!-- AVATAR -->
+                    <div class="avatar_case f-w-5 f-sm-1" style="margin-top: -15px !important;">
+                      <ul>
+                        <li class="lst" style="float: left; margin-left: 0px !important;">
+                          <span>by</span>
+                          <a href="#" class="txt-avater txt-sm" onmouseover="resetH()" onmouseleave="resetT()">Unk.</a>
+                        </li>
+                        <li> Nov 15, 2022 </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- left small card item end -->
+              <!-- right small card item start -->
+              <div class="col-sm-6 ">
+                <div class="my-grad cl-1 img_ph-4 m-t-8" id="resetHover">
+                  <div class="av-txt-aln">
+                    <!-- LIFESTYLE BADGE -->
+                    <div id="badge">
+                      <a href="#" class="text-bg-info badge f-1">
+                        <span class="bi bi-dribbble"></span>
+                        Sport
+                      </a>
+                    </div>
+                    <!-- HEADING -->
+                    <div id="b-b head">
+                      <a href="#" class="f-1p3 txt f-w-7 al-l">
+                        The Defeat OF The Greatest B Team
+                      </a>
+                    </div>
+                    <!-- AVATAR -->
+                    <div class="avatar_case f-w-5 f-sm-1" style="margin-top: -15px !important;">
+                      <ul>
+                        <li class="lst" style="float: left; margin-left: 0px !important;">
+                          <span>by</span>
+                          <a href="#" class="txt-avater txt-sm" onmouseover="resetH()" onmouseleave="resetT()">Unk.</a>
+                        </li>
+                        <li> Aug 15, 2022 </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- right small card item end -->
+            </div>
+          </div>
+          <!-- right card item end -->
+          <!-- start of main-content and sidebar -->
+          <!-- start of main-content -->
+          <div class="col-lg-9">
+            <div class="row">
+              <!-- Latest breaking news heading -->
+              <div class="col-sm-12 m-t-8">
+                <h2 class="f-w-7">
+                  <span class="bi bi-clock-history"></span>
+                  Today's top highlights
+                </h2>
+                <p>Latest breaking news, pictures, videos, and special report</p>
+              </div>
+              <!--end of Latest breaking news heading -->
+              <!-- start of main-content -->
+              <!-- CARD-1 travel img_ph-5-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-5 position-relative">
+                  <!-- TRAVEL BADGE -->
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-danger badge f-1">
+                      <span class="bi bi-airplane-fill"></span>
+                      Travel
+                    </a>
+                  </div>
+                </div>
+                <div class="m-t-3">
+                  <p>@sponsored</p>
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire
+                    difficulty gay assistance joy. Unaffected at ye of compliment alteration to</p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-4.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Dec 05, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CARD-2 technology img_ph-6-->
+              <div class="col-sm-6 m-t-3">
+                <!-- TECHNOLOGY BADGE -->
+                <div class="img_ph-6 position-relative">
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-warning badge f-1">
+                      <span class="bi bi-vinyl"></span>
+                      Technology
+                    </a>
+                  </div>
+                  <!-- TOP-INDICATOR -->
+                  <div id="top-indicator" title="This post has a video">
+                    <div class="bg-img-circle f-1 text-white hover-text" id="fl-r">
+                    </div>
+                    <div class="bg-text" id="fl-r">
+                      <span class="tooltip-text f-w-7" id="left">music</span>
+                      <span class="bi bi-camera-video-fill"></span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">
+                    Place voice no arises along to. Parlors waiting so against me no. Wishing calling is warrant settled
+                    was lucky. Express besides it present if at an opinion visitor.
+                  </p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-2.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Jan 08, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12"></div>
+              <!-- CARD-3 gadgets img_ph-7-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-7 position-relative">
+                  <div class="av-txt-aln3" id="badge">
+                    <!-- Gadgets Badge -->
+                    <a href="#" class="text-bg-success badge f-1">
+                      <span class="bi bi-menu-button-fill"></span>
+                      Gadgets
+                    </a>
+                  </div>
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire
+                    difficulty gay assistance joy. Unaffected at ye of compliment alteration to</p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-4.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Dec 05, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CARD-4 sports img_ph-8-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-8 position-relative">
+                  <!-- SPORT BADGE -->
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-info badge f-1">
+                      <span class="bi bi-dribbble"></span>
+                      Sport
+                    </a>
+                  </div>
+                  <!-- TOP-INDICATOR -->
+                  <!-- <div id="top-indicator">
+                      <div class="bg-img-circle f-1 text-white hover-text" id="fl-r">
+                      </div>
+                      <div class="bg-text" id="fl-r">
+                        <span class="tooltip-text f-w-7" id="left">music</span>
+                        <span class="bi bi-music-note"></span>
+                      </div>
+                    </div> -->
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">
+                    Place voice no arises along to. Parlors waiting so against me no. Wishing calling is warrant settled
+                    was lucky. Express besides it present if at an opinion visitor.
+                  </p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-2.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Jan 08, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CARD-5 music-play img_ph-9-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-9 position-relative">
+                  <!-- MUSIC PLACEHOLDER -->
+                  <span class="bi bi-skip-forward-fill next-btn f-1" onclick="next()"></span>
+                  <span class="bi bi-skip-backward-fill prev-btn f-1" onclick="prev()"></span>
+                  <audio controls class="m-a block">
+                    <source src="assests/audio/Victony_Kolomental.ogg" type="audio/ogg">
+                    <source src="assests/audio/Victony_Kolomental.mp3" type="audio/mpeg" id="next" id="prev">
+                  </audio>
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire
+                    difficulty gay assistance joy. Unaffected at ye of compliment alteration to</p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-4.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Dec 05, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CARD-6 photography img_ph-10-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-10 position-relative">
+                  <!-- PHOTOGTRAPHY BADGE -->
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-danger badge f-1">
+                      <span class="bi bi-camera2"></span>
+                      Photography
+                    </a>
+                  </div>
+                  <!-- TOP-INDICATOR -->
+                  <!-- <div id="top-indicator">
+                      <div class="bg-img-circle f-1 text-white hover-text" id="fl-r">
+                      </div>
+                      <div class="bg-text" id="fl-r">
+                        <span class="tooltip-text f-w-7" id="left">music</span>
+                        <span class="bi bi-music-note"></span>
+                      </div>
+                    </div> -->
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">
+                    Place voice no arises along to. Parlors waiting so against me no. Wishing calling is warrant settled
+                    was lucky. Express besides it present if at an opinion visitor.
+                  </p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-2.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Jan 08, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- LOAD MORE BTN -->
+              <div class="col-sm-12 m-t-3">
+                <button class="lmp-btn block f-w-6" id="lmc" type="button" onclick="loadMC()">
+                  Load more post
+                </button>
+              </div>
+              <!-- LOAD MORE CONTENT -->
+              <div class="p-0" id="load-more-content">
+                <div class="row">
+              <!-- CARD-1 travel img_ph-5-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-5 position-relative">
+                  <!-- TRAVEL BADGE -->
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-danger badge f-1">
+                      <span class="bi bi-airplane-fill"></span>
+                      Travel
+                    </a>
+                  </div>
+                </div>
+                <div class="m-t-3">
+                  <p>@sponsored</p>
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire
+                    difficulty gay assistance joy. Unaffected at ye of compliment alteration to</p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-4.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Dec 05, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CARD-2 technology img_ph-6-->
+              <div class="col-sm-6 m-t-3">
+                <!-- TECHNOLOGY BADGE -->
+                <div class="img_ph-6 position-relative">
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-warning badge f-1">
+                      <span class="bi bi-vinyl"></span>
+                      Technology
+                    </a>
+                  </div>
+                  <!-- TOP-INDICATOR -->
+                  <div id="top-indicator" title="This post has a video">
+                    <div class="bg-img-circle f-1 text-white hover-text" id="fl-r">
+                    </div>
+                    <div class="bg-text" id="fl-r">
+                      <span class="tooltip-text f-w-7" id="left">music</span>
+                      <span class="bi bi-camera-video-fill"></span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">
+                    Place voice no arises along to. Parlors waiting so against me no. Wishing calling is warrant settled
+                    was lucky. Express besides it present if at an opinion visitor.
+                  </p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-2.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Jan 08, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12"></div>
+              <!-- CARD-3 gadgets img_ph-7-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-7 position-relative">
+                  <div class="av-txt-aln3" id="badge">
+                    <!-- Gadgets Badge -->
+                    <a href="#" class="text-bg-success badge f-1">
+                      <span class="bi bi-menu-button-fill"></span>
+                      Gadgets
+                    </a>
+                  </div>
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire
+                    difficulty gay assistance joy. Unaffected at ye of compliment alteration to</p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-4.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Dec 05, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- CARD-4 sports img_ph-8-->
+              <div class="col-sm-6 m-t-3">
+                <div class="img_ph-8 position-relative">
+                  <!-- SPORT BADGE -->
+                  <div class="av-txt-aln3" id="badge">
+                    <a href="#" class="text-bg-info badge f-1">
+                      <span class="bi bi-dribbble"></span>
+                      Sport
+                    </a>
+                  </div>
+                  <!-- TOP-INDICATOR -->
+                  <!-- <div id="top-indicator">
+                      <div class="bg-img-circle f-1 text-white hover-text" id="fl-r">
+                      </div>
+                      <div class="bg-text" id="fl-r">
+                        <span class="tooltip-text f-w-7" id="left">music</span>
+                        <span class="bi bi-music-note"></span>
+                      </div>
+                    </div> -->
+                </div>
+                <div class="m-t-3">
+                  <a href="#" id="hl" class="f-1p5 txt-black txt-sm-1p5 f-w-5">
+                    Top 12 Places To Spend Your lovely Holiday
+                  </a>
+                  <p class="m-t-3">
+                    Place voice no arises along to. Parlors waiting so against me no. Wishing calling is warrant settled
+                    was lucky. Express besides it present if at an opinion visitor.
+                  </p>
+                </div>
+                <div class="avatar_case f-w-5 f-sm-1">
+                  <ul>
+                    <div class="avatar" id="fl-l">
+                      <img src="assests/imges/tech-2.jpg" alt="avatar" width="160%">
+                    </div>
+                    <li class="lst" id="fl-l">
+                      <span id="span">by</span>
+                      <a href="#" id="hl" class="txt-black txt-sm-1p5">Unknown</a>
+                    </li>
+                    <li id="li"> Jan 08, 2022 </li>
+                  </ul>
+                </div>
+              </div>
+                </div>
+              </div>
+              <!-- end of main-content -->
+            </div>
+          </div>
+          <!-- end  of main-content -->
+          <!-- start of sidebar -->
+          <div class="col-lg-3 m-t-7 p-lr-1 ff-1">
+            <div class="row">
+              <!-- facebook sidebar social -->
+              <div class="col-4 p-lr-2">
+                <a href="#" class="bg-facebook al-c f-1 block">
+                  <div class="bi bi-facebook m-d-5"></div>
+                  <span class="f-w-6 f-1">5k</span>
+                  <span class="block f-p9 f-w-4 m-t-6">Fans</span>
+                </a>
+              </div>
+               <!-- instagram sidebar social -->
+               <div class="col-4 p-lr-2">
+                <a href="#" class="bg-instagram-gradient al-c block">
+                  <div class="bi bi-instagram m-d-5"></div>
+                  <span class="f-w-6 f-1">1.8M</span>
+                  <span class="block f-p9 f-w-4 m-t-6">Followers</span>
+                </a>
+              </div>
+              <!-- youtube sidebar social -->
+              <div class="col-4 p-lr-2">
+                <a href="#" class="bg-youtube al-c f-1 block">
+                  <div class="bi bi-youtube m-d-5"></div>
+                  <span class="f-w-6 f-1">22k</span>
+                  <span class="block f-p9 f-w-4 m-t-6">Subs</span>
+                </a>
+              </div>
+              <!-- TRENDING TOPICS -->
+              <div>
+                <!-- heading -->
+                <div class="col-12 m-t-15">
+                  <h4 class="f-w-7"> Trending topics </h4>
+                </div>
+                <!-- image placeholders -->
+                <!-- photography img_ph-11-->
+                <div class="col-12 m-t-3">
+                  <div class="my-grad-t img_ph-11 al-c border-r-5">
+                    <a href="#" class="f-1p3 txt f-w-6">
+                      Photogtraphy
+                    </a>
+                  </div>
+                </div>
+                <!-- business img_ph-12-->
+                <div class="col-12 m-t-6">
+                  <div class="my-grad-t img_ph-12 al-c border-r-5">
+                    <a href="#" class="f-1p3 txt f-w-6">
+                      Business
+                    </a>
+                  </div>
+                </div>
+                <!-- music img_ph-13-->
+                <div class="col-12 m-t-6">
+                  <div class="my-grad-t img_ph-13 al-c border-r-5">
+                    <a href="#" class="f-1p3 txt f-w-6">
+                      Music
+                    </a>
+                  </div>
+                </div>
+                <!-- Technology img_ph-14-->
+                <div class="col-12 m-t-6">
+                  <div class="my-grad-t img_ph-14 al-c border-r-5">
+                    <a href="#" class="f-1p3 txt f-w-6">
+                      Technology
+                    </a>
+                  </div>
+                </div>
+                <!-- travel img_ph-15-->
+                <div class="col-12 m-t-6">
+                  <div class="my-grad-t img_ph-15 al-c border-r-5">
+                    <a href="#" class="f-1p3 txt f-w-6">
+                      Travel
+                    </a>
+                  </div>
+                </div>
+                <!-- view all categotries button -->
+                <div class="col-12 ai-c">
+                  <div class="dropdown al-c"">
+                    <button class="dropbtn inline f-w-5">
+                      view all categotries
+                      <i class="bi bi-arrow-down-circle"></i>
+                      <div class="half-border dropbtn p-0"></div>
+                    </button>
+                    <div class="dropdown-content al-l position-absolute left-10" id="btn">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END OF TRENDING TOPICS -->
+              <!-- RECENT POST -->
+              <div class="col-12 col-sm-6 col-lg-12 ff-1 g-3 m-d-18">
+                <!-- heading -->
+                <div class="col-12">
+                  <h4 class="f-w-7"> Recent post</h4>
+                </div>
+                <!-- small-card 1 img_ph-16-->
+                <div class="small-card c-p lh-n row g-3 m-t-4">
+                  <div class="col-4">
+                    <div class="img_ph-16 border-r-5"></div>
+                  </div>
+                  <div class="col-8">
+                    <a href="#" id="hl" class="f-p9 txt-black txt-sm-1p5 f-w-7">
+                      The pros and cons of business agency
+                    </a>
+                    <p class="f-p9 m-t-3">Jan 10, 2022</p>
+                  </div>
+                </div>
+                <!-- small-card 2 img_ph-17-->
+                <div class="small-card c-p lh-n row m-t-9 g-3">
+                  <div class="col-4">
+                    <div class="img_ph-17 border-r-5"></div>
+                  </div>
+                  <div class="col-8">
+                    <a href="#" id="hl" class="f-p9 txt-black txt-sm-1p5 f-w-7">
+                      Ten questions you should answer truthfully
+                    </a>
+                    <p class="f-p9 m-t-3">Sept 09, 2022</p>
+                  </div>
+                </div>
+                 <!-- small-card 3 img_ph-18-->
+                 <div class="small-card c-p lh-n row m-t-9 g-3">
+                  <div class="col-4">
+                    <div class="img_ph-18 border-r-5"></div>
+                  </div>
+                  <div class="col-8">
+                    <a href="#" id="hl" class="f-p9 txt-black txt-sm-1p5 f-w-7">
+                      Ten questions you should answer truthfully
+                    </a>
+                    <p class="f-p9 m-t-3">Aug 19, 2022</p>
+                  </div>
+                </div>
+                 <!-- small-card 4 img_ph-19-->
+                 <div class="small-card c-p lh-n row m-t-9 g-3">
+                  <div class="col-4">
+                    <div class="img_ph-19 border-r-5"></div>
+                  </div>
+                  <div class="col-8">
+                    <a href="#" id="hl" class="f-p9 txt-black txt-sm-1p5 f-w-7">
+                      Five unbelivable facts about nature
+                    </a>
+                    <p class="f-p9 m-t-3">Oct 12, 2022</p>
+                  </div>
+                </div>
+              </div>
+              <!-- AD's -->
+                <div class="col-12 col-sm-6 col-lg-12 al-r">
+                  <div class="position-relative">
+                    <a class="c-p" href="#">
+                      <img class="border-r-5" src="assests/ad's/mygifbull.gif" alt="add" width="100%" max-height="300px" height="250px">
+                    </a>
+                    <div class="f-p7 m-t-3">
+                      <span class="ads f-1 p-lr">Ads</span>
+                      <span style="color: grey">ads via</span>
+                      <a class="dropbtn f-p7 p-0 m-lr-0" href="#">Bootstrap</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of sidebar -->
+          <!-- end of main-content and sidebar -->
+          <!-- DIVIDER -->
+          <div class="col-sm-12 b-border m-t-3"></div>
+          <!-- END OF DIVIDER -->
+          <div class="col-sm-12 m-t-3" id="myHeader">
+              <h2>
+                <span class="bi bi-file-image"></span>
+                Image Grid
+              </h2>
+              <!-- <p>Click on the buttons to change the grid view.</p>
+              <button class="btn" onclick="one()">1</button>
+              <button class="btn active" onclick="two()">2</button>
+              <button class="btn" onclick="four()">4</button> -->
+          </div>
+          <div class="col-sm-4 p-lr-2">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_1.jpg" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_7.jpg" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_2.jpg" alt="" width="100%" height="auto">
+          </div>
+          <div class="col-sm-4">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_9.jfif" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_8.jpg" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_4.jpg" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_10.jpg" alt="" width="100%" height="auto">
+          </div>
+          <div class="col-sm-4 p-lr-2">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_5.jpg" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_3.jpg" alt="" width="100%" height="auto">
+              <img class="border-r-5 m-t-5" src="assests/img-gallery/img_12.jfif" alt="" width="100%" height="auto">
+          </div>
+          <!-- Photo Grid -->
+          <!-- <div class="my-row"> 
+  <div class="my-column">
+    <img src="assests/img-gallery/img_1.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_2.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_3.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_4.jpg" style="width:100%">
+  </div>
+  <div class="my-column">
+    <img src="assests/img-gallery/img_9.jfif" style="width:100%">
+    <img src="assests/img-gallery/img_10.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_11.jfif" style="width:100%">
+    <img src="assests/img-gallery/img_12.jfif" style="width:100%">
+    <img src="assests/img-gallery/img_5.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_2.jpg" style="width:100%">
+  </div>  
+  <div class="my-column">
+    <img src="assests/img-gallery/img_7.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_4.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_3.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_8.jpg" style="width:100%">
+    
+  </div>
+  <div class="column">
+    <img src="assests/img-gallery/img_9.jfif" style="width:100%">
+    <img src="assests/img-gallery/img_10.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_11.jfif" style="width:100%">
+    <img src="assests/img-gallery/img_12.jfif" style="width:100%">
+    <img src="assests/img-gallery/img_5.jpg" style="width:100%">
+    <img src="assests/img-gallery/img_2.jpg" style="width:100%">
+  </div>
+          </div> -->
+        </div>
+      </div>
+       
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
